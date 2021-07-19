@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script src="js/asa_v0_3.js"></script>
+<script src="js/script.js"></script>
+<script src="js/week_control.js"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Пароль
+<input type="text"> -->
+
+<div class="wrapper">
+<div class="container">
+
+<div class="popup" id="popup_timer">
+    <div class="popup_content">
+        <h4 class="popup_title">The time has come !</h4>
+        <div class="popup_rdr_content"></div>
+        <button type="button" class="turn_off_timer">Turn off</button>
+        <button type="button" class="popup_timer_delete">Delete reminder</button>
+    </div>
+</div>
+
+<audio id="audio" src=""></audio>
+
+<div class="week_days">
+    <div class="day0 week_day">
+        <p class="date_of_week">DD.MM.YYyy</p>
+        <p class="name_date_of_week">Monday</p>
+    </div>
+
+    <div class="day1 week_day">
+        <p class="date_of_week">DD.MM.YYyy</p>
+        <p class="name_date_of_week">Tuesday</p>
+    </div>
+
+    <div class="day2 week_day">
+        <p class="date_of_week">DD.MM.YYyy</p>
+        <p class="name_date_of_week">Wadnesday</p>
+    </div>
+
+    <div class="day3 week_day">
+        <p class="date_of_week">DD.MM.YYyy</p>
+        <p class="name_date_of_week">Thursday</p>
+    </div>
+
+    <div class="day4 week_day">
+        <p class="date_of_week">DD.MM.YYyy</p>
+        <p class="name_date_of_week">Friday</p>
+    </div>
+
+    <div class="day5 week_day">
+        <p class="date_of_week">DD.MM.YYyy</p>
+        <p class="name_date_of_week">Suturday</p>
+    </div>
+
+    <div class="day6 week_day">
+        <p class="date_of_week">DD.MM.YYyy</p>
+        <p class="name_date_of_week">Sunday</p>
+    </div>
+    
+
+</div>
+
+<form class="reminder_wrapper" style="display: none;">
+    <div class="working_space_reminder" style="display: none;">
+        <div class="write_reminder">
+            <div class="timer_control">
+                <input type="text"> 
+                <div class="melody">
+                    <img src="img/icons8-melodic.png" alt="">
+                    <select class="select_melody">
+                        <option value="0">Turu-Turu</option>
+                    </select>
+                </div>
+                <button type="button" class="save_timer" title="Save">✔</button>
+            </div>
+            <textarea name="" class="reminder_text"></textarea>
+        </div>
+        <ul class="reminder_controls">
+            <li class="remove_reminder rmr_ctrl">
+                <!-- <button type="button">X</button> -->
+                x
+            </li>
+            <li class="timer_of_reminder rmr_ctrl">
+                <!-- Source of img https://icons8.ru/icon/34/%D1%87%D0%B0%D1%81%D1%8B -->
+                <img src="img/icons8_clock.svg" alt="">
+            </li>
+            <li class="complete_reminder rmr_ctrl">
+                -
+            </li>
+        </ul>
+    </div>
+
+    <div class="create_reminder_block">
+        <div class="adding_cross"></div>
+    </div>
+</form>
+
+</div> <!-- End of container -->
+
+<div class="week_control">
+    <div class="motivational_words">Today is <span></span></div>
+    <div class="wc_date"></div>
+</div>
+
+</div>
+
+<script>
+const pattern = getEl(".reminder_wrapper");
+const insert_place = getEl(".week_day");
+const rdr = getEl(".create_reminder_block");
+
+let week_control = new Week_control (insert_place);
+//rdr = reminder
+week_control.insert_adding_rdr(pattern);
+
+// localStorage.clear();
+
+// let new_data_id = localStorage.key(0);
+// console.log(new_data_id)
+// const parse_dataJ = JSON.parse(localStorage[new_data_id]);
+// console.log(parse_dataJ)
+
+</script>
+
+</body>
+</html>
