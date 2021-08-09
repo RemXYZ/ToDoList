@@ -115,18 +115,20 @@
     flex: 1 0 auto;
 }
 
-.reminder_wrapper {
-    width: 95%;
-    /* min-height: 90px; */
-    margin: 10px auto;
-}
-
 .chg_date {
     text-align: center;
     width: 80px;
     padding: 2px;
     border-radius: 0.5rem;
     border: 1px solid rgb(160, 160, 160);
+}
+
+
+/* REMINDER PART */
+.reminder_wrapper {
+    width: 95%;
+    /* min-height: 90px; */
+    margin: 10px auto;
 }
 
 .working_space_reminder {
@@ -275,6 +277,7 @@ margin: auto auto;
     -moz-transform:rotate(90deg);
     transform:rotate(90deg);
 }
+/* END OF REMINDER PART */
 
 
 .week_days {
